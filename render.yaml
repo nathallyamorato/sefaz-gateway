@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sefaz-gateway
+    runtime: docker
+    rootDir: sefaz-gateway
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: GATEWAY_SECRET
+        sync: false
